@@ -1,3 +1,6 @@
+using CsvHelper.Configuration;
+using MedWebApiApp.Helpers;
+
 namespace MedWebApiApp.Models
 {
     public class Provider
@@ -7,5 +10,23 @@ namespace MedWebApiApp.Models
         public string Hospital { get; set; }
         public bool Doctor { get; set; }
 
+    }
+
+
+    public sealed class ProviderMap : ClassMap<Provider>
+    {
+        public ProviderMap()
+        {
+            Map(m => m.Name)     // validate name
+                .Index(0);
+            Map(m => m.Number)  // validate provider number
+                .Index(1);
+            Map(m => m.Hospital)  // empty hospital?
+                .Index(2);
+            Map(m => m.Doctor)
+                .Index(3)
+                .TypeConverter<YesNoBooleanConverter>();
+
+        }
     }
 }

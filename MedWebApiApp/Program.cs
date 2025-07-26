@@ -9,6 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Load all data files
+//builder.Services.AddSingleton(new DataSource());
+builder.Services.AddScoped<IDataSourceService, DataSourceService>();
+builder.Services.AddScoped<IProviderService, ProviderService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,5 +32,3 @@ app.MapControllers();
 
 app.Run();
 
-// Load all data files
-builder.Services.AddSingleton(new DataSource());

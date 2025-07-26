@@ -1,0 +1,5 @@
+﻿User,ViewProviderNumbers,ViewProviderNames,ViewProviderLocations,ViewTreatmentDetails,EditTreatment,ViewClientName,ViewClientMedicalRecordNumber,ViewPracticeInformation
+Clerk,No,Yes,Yes,No,No,Yes,No,Yes
+Administrator,Yes,Yes,Yes,No,No,Yes,Yes,Yes
+Doctor,Only their own,Yes,Yes,Yes,Only if they are the provider,Yes,Yes,Yes
+Nurse,Only their own,Yes,Only at their own location,Only at their location,Only if they are the provider,Yes,No,Yes
