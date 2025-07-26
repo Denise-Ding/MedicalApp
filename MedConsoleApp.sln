@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedWebApiApp", "MedWebApiAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedConsoleApp", "MedConsoleApp\MedConsoleApp.csproj", "{1D76A3BE-BADC-228E-F9DD-2E6E60A71973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{1F44442C-74A6-4E2E-AB46-B30B395540EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1D76A3BE-BADC-228E-F9DD-2E6E60A71973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D76A3BE-BADC-228E-F9DD-2E6E60A71973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D76A3BE-BADC-228E-F9DD-2E6E60A71973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F44442C-74A6-4E2E-AB46-B30B395540EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F44442C-74A6-4E2E-AB46-B30B395540EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F44442C-74A6-4E2E-AB46-B30B395540EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F44442C-74A6-4E2E-AB46-B30B395540EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

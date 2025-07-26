@@ -1,5 +1,5 @@
 ﻿using CsvHelper.Configuration;
-using MedWebApiApp.Models;
+using Shared.Models;
 using System.Globalization;
 
 namespace MedWebApiApp.Services

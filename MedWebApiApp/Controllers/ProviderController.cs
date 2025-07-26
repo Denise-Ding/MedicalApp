@@ -1,6 +1,6 @@
-﻿using MedWebApiApp.Models;
-using MedWebApiApp.Services;
+﻿using MedWebApiApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Models;
 
 namespace MedWebApiApp.Controllers
 {
@@ -24,7 +24,7 @@ namespace MedWebApiApp.Controllers
         [HttpGet("{number}")]
         public ActionResult<Provider> GetProvider(string number)
         {
-            var provider = _providerService.GetProviderByNumber(number);
+            Provider provider = _providerService.GetProviderByNumber(number);
             if (provider == null)
                 return NotFound();
 

@@ -1,4 +1,4 @@
-﻿using MedWebApiApp.Models;
+﻿using Shared.Models;
 
 namespace MedWebApiApp.Services
 {
