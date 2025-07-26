@@ -1,5 +1,7 @@
 ﻿
 using Shared.Models;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 
 
@@ -7,9 +9,12 @@ using System.Text.Json;
 using HttpClient client = new HttpClient();
 client.BaseAddress = new Uri("https://localhost:7047/");
 
+byte[] byteArray = Encoding.ASCII.GetBytes("admin:778899");   // replace with secured password stored else where
+client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
 
 while (true)
 {
+    Console.WriteLine("Server & Port should be https://localhost:7047/");
     Console.Write("Enter Provider Number (or 'q' to quit): ");
     string providerNumber = Console.ReadLine();
 
@@ -33,6 +38,10 @@ while (true)
             }
 
             Console.WriteLine($"Provider details: {json}");
+            Console.WriteLine($"These are your patients (sorry function not available)");
+
+            // show list of patients allow by this provider
+
         }
         catch (JsonException ex)
         {

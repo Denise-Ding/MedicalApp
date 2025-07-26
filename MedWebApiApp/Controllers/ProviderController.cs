@@ -1,4 +1,5 @@
 ﻿using MedWebApiApp.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Models;
 
@@ -6,6 +7,7 @@ namespace MedWebApiApp.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProviderController : ControllerBase
     {
         private readonly IProviderService _providerService;

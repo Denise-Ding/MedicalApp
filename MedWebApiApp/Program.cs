@@ -1,4 +1,6 @@
+using MedWebApiApp.Authentication;
 using MedWebApiApp.Services;
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IDataSourceService, DataSourceService>();
 builder.Services.AddScoped<IProviderService, ProviderService>();
 
+
+builder.Services.AddAuthentication("BasicAuthentication")
+    .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
