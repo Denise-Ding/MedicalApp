@@ -1,0 +1,6 @@
+@MedWebApiApp_HostAddress = http://localhost:5039
+
+GET {{MedWebApiApp_HostAddress}}/controllerA/
+Accept: application/json
+
+###
