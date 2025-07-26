@@ -15,7 +15,8 @@ client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basi
 while (true)
 {
     Console.WriteLine("Server & Port should be https://localhost:7047/");
-    Console.Write("Enter Provider Number (or 'q' to quit): ");
+    Console.WriteLine("Work in progress. Only Doctor is validated.\n\r");
+    Console.Write("Please enter Provider Number (or 'q' to quit): ");
     string providerNumber = Console.ReadLine();
 
     if (providerNumber?.ToLower() == "q")
@@ -37,11 +38,12 @@ while (true)
                 continue;
             }
 
-            Console.WriteLine($"Provider details: {json}");
-            Console.WriteLine($"These are your patients (sorry function not available)");
+            Console.WriteLine($"We found you: {json} \n");
+            //Console.WriteLine($"These are your patients (sorry function not available)");
 
             // show list of patients allow by this provider
 
+            Console.WriteLine("If this is not you, please contact your hospital administrator.");
         }
         catch (JsonException ex)
         {
